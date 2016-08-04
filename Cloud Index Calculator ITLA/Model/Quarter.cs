@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cloud_Index_Calculator_ITLA.Model
 {
-    //TODO this class is expected to be used as a Entity, so is neccesary to divive the business logic
+    //TODO this class is expected to be used as an Entity, so is neccesary to divide the business logic
     //to another place
     class Quarter
     {

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Cloud_Index_Calculator_ITLA.Model
 {
-    //TODO this class is expected to be used as a Entity, so is neccesary to divive the business logic
-    //to another place
     class Quarter
     {
         public int Id { get; set; }
@@ -16,17 +15,18 @@ namespace Cloud_Index_Calculator_ITLA.Model
 
         public ICollection<Selection> Selections { get; set; }
 
-        //TODO limiting double result to two decimal places and round out depending of the third one
+        [NotMapped]
         public double QuaterIndexAverage {
             get
             {
                 var totalCredits = 0;
                 Selections.ToList().ForEach(e => totalCredits += e.Subject.Credits);
 
-                return (double) TotalScore / totalCredits;
+                return Math.Round((double) TotalScore / totalCredits, 2);
             }
         }
 
+        [NotMapped]
         private int TotalScore
         {
             get

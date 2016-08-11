@@ -47,25 +47,25 @@ namespace Cloud_Index_Calculator_ITLA.Test
 
             var A = new Qualification
             {
-                Letter = 'A',
+                Letter = "A",
                 Value = 4
             };
 
             var B = new Qualification
             {
-                Letter = 'B',
+                Letter = "B",
                 Value = 3
             };
 
             var C = new Qualification
             {
-                Letter = 'C',
+                Letter = "C",
                 Value = 2
             };
 
             var F = new Qualification
             {
-                Letter = 'F',
+                Letter = "F",
                 Value = 0
             };
 

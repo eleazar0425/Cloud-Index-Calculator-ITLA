@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cloud_Index_Calculator_ITLA.Model
 {
-    class Subject
+    public class Subject
     {
         public int Id { get; set; }
 
@@ -16,7 +16,7 @@ namespace Cloud_Index_Calculator_ITLA.Model
 
         public int Credits { get; set; }
 
-        public ICollection<Career> Careers { get; set; }
+        public List<Career> Careers { get; set; }
 
     }
 }

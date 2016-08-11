@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A9A1700-8A5B-48AA-9C4B-81AD56BF3DFC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{1DB4B9E3-74AD-48DB-A979-32E31C94DEFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cloud_Index_Calculator_ITLA</RootNamespace>
-    <AssemblyName>Cloud Index Calculator ITLA</AssemblyName>
+    <RootNamespace>Cloud_Index_Calculator_ITLA.Data</RootNamespace>
+    <AssemblyName>Cloud Index Calculator ITLA.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,18 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Model\Career.cs" />
-    <Compile Include="Model\Qualification.cs" />
-    <Compile Include="Model\Quarter.cs" />
-    <Compile Include="Model\Selection.cs" />
-    <Compile Include="Model\Subject.cs" />
-    <Compile Include="Test\Test1.cs" />
-    <Compile Include="Util\CalculatorUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -58,13 +49,39 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IndexCalculatorContext.cs" />
+    <Compile Include="Migrations\201608112241089_defaultstructure.cs" />
+    <Compile Include="Migrations\201608112241089_defaultstructure.Designer.cs">
+      <DependentUpon>201608112241089_defaultstructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608112247310_updatinglettertype.cs" />
+    <Compile Include="Migrations\201608112247310_updatinglettertype.Designer.cs">
+      <DependentUpon>201608112247310_updatinglettertype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cloud Index Calculator ITLA\Cloud Index Calculator ITLA.csproj">
+      <Project>{9a9a1700-8a5b-48aa-9c4b-81ad56bf3dfc}</Project>
+      <Name>Cloud Index Calculator ITLA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608112241089_defaultstructure.resx">
+      <DependentUpon>201608112241089_defaultstructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608112247310_updatinglettertype.resx">
+      <DependentUpon>201608112247310_updatinglettertype.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
-  <PropertyGroup>
-    <SsdtUnitTestVersion>2.0</SsdtUnitTestVersion>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

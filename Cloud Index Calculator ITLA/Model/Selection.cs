@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 
 namespace Cloud_Index_Calculator_ITLA.Model
 {
-    class Selection
+    public class Selection
     {
         public int Id { get; set; }
 
         public virtual Subject Subject { get; set; }
 
         public virtual Qualification Qualification { get; set; }
+
+        public int Qualification_Id { get; set; }
+
+        public int Subject_Id { get; set; }
+
+        public int Quarter_Id { get; set; }
 
         /* The score represents one of the most important values in the process of calculating
          * the index. 

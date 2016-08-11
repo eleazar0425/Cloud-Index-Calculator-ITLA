@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Cloud_Index_Calculator_ITLA.Model
 {
-    class Quarter
+    public class Quarter
     {
         public int Id { get; set; }
 
         public int No { get; set; }
 
-        public ICollection<Selection> Selections { get; set; }
+        public List<Selection> Selections { get; set; }
 
         [NotMapped]
         public double QuaterIndexAverage {

@@ -27,7 +27,7 @@ namespace Cloud_Index_Calculator_ITLA.Model
         }
 
         [NotMapped]
-        private int TotalScore
+        public int TotalScore
         {
             get
             {
@@ -37,5 +37,15 @@ namespace Cloud_Index_Calculator_ITLA.Model
             } 
         }
 
+        [NotMapped]
+        public int TotalCredits
+        {
+            get
+            {
+                var credits = 0;
+                Selections.ToList().ForEach(e => credits += e.Subject.Credits);
+                return credits;
+            }
+        }
     }
 }

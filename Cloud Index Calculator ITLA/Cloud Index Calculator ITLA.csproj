@@ -46,6 +46,7 @@
     <Compile Include="Model\Selection.cs" />
     <Compile Include="Model\Subject.cs" />
     <Compile Include="Test\Test1.cs" />
+    <Compile Include="Util\CalculatorUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">

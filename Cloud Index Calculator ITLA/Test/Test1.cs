@@ -1,4 +1,5 @@
 ﻿using Cloud_Index_Calculator_ITLA.Model;
+using Cloud_Index_Calculator_ITLA.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,7 +94,64 @@ namespace Cloud_Index_Calculator_ITLA.Test
                 Selections = selections
             };
 
-            Console.Write("El indice cuatrimestral fue " + firstQuater.QuaterIndexAverage);
+            var subject4 = new Subject
+            {
+                Name = "Precalculo",
+                ShortName = "Calc11",
+                Credits = 5,
+                Careers = careers
+            };
+
+            var subject5 = new Subject
+            {
+                Name = "Introduccion a la base de datos",
+                ShortName = "SOFT102",
+                Credits = 4,
+                Careers = careers
+            };
+
+            var subject6 = new Subject
+            {
+                Name = "Fundamentos de programacion",
+                ShortName = "Calc11",
+                Credits = 4,
+                Careers = careers
+            };
+
+            var seleccions2 = new List<Selection>();
+            seleccions2.Add(new Selection
+            {
+                Subject = subject4,
+                Qualification = C
+            });
+            seleccions2.Add(new Selection
+            {
+                Subject = subject5,
+                Qualification = A
+            });
+            seleccions2.Add(new Selection
+            {
+                Subject = subject6,
+                Qualification = B
+            });
+
+            var secondQuarter = new Quarter
+            {
+                No = 2,
+                Selections = seleccions2
+            };
+
+            var generalIndex = CalculatorUtil.CalculateFullIndex(new List<Quarter> {
+                firstQuater,
+                secondQuarter
+            });
+
+            Console.WriteLine("El indice cuatrimestral del C1 fue " + firstQuater.QuaterIndexAverage);
+
+            Console.WriteLine("El indice cuatrimestral del C2 fue " + secondQuarter.QuaterIndexAverage);
+
+            Console.WriteLine("El indice general fue " + generalIndex);
+
             Console.ReadKey();
         }
     }

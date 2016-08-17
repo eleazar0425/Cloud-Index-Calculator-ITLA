@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud Index Calculator ITLA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud Index Calculator ITLA.Tests", "Cloud Index Calculator ITLA.Tests\Cloud Index Calculator ITLA.Tests.csproj", "{BBA30268-D9DF-49CE-B474-07B2C0F0D026}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud Index Calculator ITLA.WebAPI", "Cloud Index Calculator ITLA.WebAPI\Cloud Index Calculator ITLA.WebAPI.csproj", "{7E31D9C8-6C61-409F-878B-6F70DF2B47F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BBA30268-D9DF-49CE-B474-07B2C0F0D026}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBA30268-D9DF-49CE-B474-07B2C0F0D026}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBA30268-D9DF-49CE-B474-07B2C0F0D026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E31D9C8-6C61-409F-878B-6F70DF2B47F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E31D9C8-6C61-409F-878B-6F70DF2B47F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E31D9C8-6C61-409F-878B-6F70DF2B47F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E31D9C8-6C61-409F-878B-6F70DF2B47F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

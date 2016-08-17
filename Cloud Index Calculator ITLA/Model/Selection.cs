@@ -26,7 +26,7 @@ namespace Cloud_Index_Calculator_ITLA.Model
          *
          *       The formula is 
          *                  Index = SumScore / SumCredits
-         *       where score is number of credits x tha value of the letter (A, B, etc)
+         *       where score = number of credits X the value of the letter (A=4, B=3, C=2, F=0)
          *       and SumScore is the sum of each individual subject score 
          *       and SumCredits the sum of credits
          */
